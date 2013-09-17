@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var newPet = prompt("Enter your new pet name", "");
+            alert("Your dog, Spike, is brown. Your new pet will also be brown.");
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 4</h3>
+    <p>Create a prompt to allow the user to enter a new pet name. Save the information in a variable named newPet. Then, display the following message: Your dog, Spike, is brown. Your new pet will also be brown.</p>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        <div id="result">
+            <h3>Result</h3>
+            <button onclick="init()">Click here to run the program.</button>
+        </div>
+        <div id="code">
+            <h3>Source Code</h3>
+           <pre>
+            function init() {
+                var newPet = prompt("Enter your new pet name", "");
+                alert("Your dog, Spike, is brown. Your new pet will also be brown.");
+            }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

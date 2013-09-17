@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var empName = prompt("Please enter employee name :");
+            var totalHours = parseInt(prompt("Please enter number of hours worked in a week :", "0"));
+            var hourlyRate = parseInt(prompt("Please enter hourly rate of pay :", "0"));
+            var overtimeRate = parseInt(prompt("Please enter overtime pay rate :", "0"));
+            var deduction = parseInt(prompt("Please enter payroll deduction :", "0"));
+            var taxRate = parseInt(prompt("Please enter tax rate:", "0"));
+            var regularHours = 40; //  8 hours/day and 5 working days in a week
+            var overtime = 0;
+
+            if(totalHours > regularHours)
+            {
+                overtime = totalHours - regularHours; 
+            }else
+            {
+                regularHours = totalHours
+            }
+
+            var grossPay = (regularHours * hourlyRate) + (overtime * overtimeRate);
+            var tax = (taxRate / 100) * grossPay;
+            var totalDeduction = tax + deduction;
+            var netPay = grossPay - totalDeduction;
+
+            alert("Gross pay of " + empName + " is " + grossPay + " and Net pay is " + netPay);
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 6</h3>
+    <p>An employer wants you to create a program that will allow her to enter each employee’s name, hourly rate of pay, number of hours worked in one week, overtime pay rate, payroll deductions (such as medical insurance, savings, etc.), and tax rate. The program should output the employees gross pay (before taxes and deductions), and net pay (after taxes and deductions) for each employee for one week.</p>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        <div id="result">
+            <h3>Result</h3>
+            <button onclick="init()">Click here to run the program.</button>
+        </div>
+        <div id="code">
+            <h3>Source Code</h3>
+           <pre>
+           function init() 
+           {
+            var empName = prompt("Please enter employee name :");
+            var totalHours = parseInt(prompt("Please enter number of hours worked in a week :", "0"));
+            var hourlyRate = parseInt(prompt("Please enter hourly rate of pay :", "0"));
+            var overtimeRate = parseInt(prompt("Please enter overtime pay rate :", "0"));
+            var deduction = parseInt(prompt("Please enter payroll deduction :", "0"));
+            var taxRate = parseInt(prompt("Please enter tax rate:", "0"));
+            var regularHours = 40; //  8 hours/day and 5 working days in a week
+            var overtime = 0;
+
+            if(totalHours > regularHours)
+            {
+                overtime = totalHours - regularHours; 
+            }else
+            {
+                regularHours = totalHours
+            }
+
+            var grossPay = (regularHours * hourlyRate) + (overtime * overtimeRate);
+            var tax = (taxRate / 100) * grossPay;
+            var totalDeduction = tax + deduction;
+            var netPay = grossPay - totalDeduction;
+
+            alert("Gross pay of " + empName + " is " + grossPay + " and Net pay is " + netPay);
+         }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

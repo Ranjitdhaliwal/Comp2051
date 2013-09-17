@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var x = parseInt(prompt("Enter first integer"));
+            var y = parseInt(prompt("Enter second integer"));
+            var z = parseInt(prompt("Enter third integer"));
+            var prod = x * y * z;
+            alert("The Product is : " + prod);
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 16</h3>
+    <p>Write a complete program that calculates and prints the products of three integers.</p>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        <div id="result">
+            <h3>Result</h3>
+            <button onclick="init()">Click here to run the program.</button>
+        </div>
+        <div id="code">
+            <h3>Source Code</h3>
+           <pre>
+
+                function init() {
+                    var x = parseInt(prompt("Enter first integer"));
+                    var y = parseInt(prompt("Enter Second integer"));
+                    var z = parseInt(prompt("Enter third integer"));
+                    var prod = x * y * z;
+                    alert("The Product is : " + prod);
+                }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

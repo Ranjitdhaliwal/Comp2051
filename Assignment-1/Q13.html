@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var num = parseInt(prompt("Please enter any integer value:"));
+            if (num != 7) {
+                alert("The variable number is not equal to 7");
+            }
+            else {
+                alert("You have enter number 7");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 13</h3>
+    <p>Create a program that evaluates a variable. If the variable number is not equal to 7, display "The variable number is not equal to 7" in a message dialog.</p>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        <div id="result">
+            <h3>Result</h3>
+            <button onclick="init()">Click here to run the program.</button>
+        </div>
+        <div id="code">
+            <h3>Source Code</h3>
+           <pre>
+
+           function init() 
+               {
+                var num = parseInt(prompt("Please enter any integer value:"));
+                if (num != 7) {
+                    alert("The variable number is not equal to 7");
+                }
+                else {
+                    alert("You have enter number 7");
+                }
+              }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

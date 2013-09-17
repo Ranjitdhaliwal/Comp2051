@@ -1,0 +1,35 @@
+﻿body {
+    font-family: Arial;
+    font-size:12px;
+}
+
+li {
+    margin:5px;
+}
+a {
+    font-family:Arial;
+    font-size:14px;
+    color:#333333;
+    text-decoration:none;
+}
+ a.back {
+        color:blue !important;
+    }
+pre {
+    font-size:12px;
+}
+div#result {
+    float:left;
+    width:48%;
+    text-align:left;
+    padding:5px;
+}
+div#code {
+    float:right;
+     width:48%;
+      text-align:left;
+      padding:5px;
+}
+ol.Answers pre {
+    color:blue;
+}

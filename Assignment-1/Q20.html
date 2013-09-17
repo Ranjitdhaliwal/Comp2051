@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init()
+        {
+            var sale;
+            var saleValue;
+            var salestotal;
+            var total;
+            var salestotalValue;
+            var commission = 0.10;
+            var x;
+
+            x = 1;
+            total = 0;
+            sale = 0;
+            saleValue = 0;
+            salestotal = 0;
+
+            while (sale != "q" && sale != "Q") {
+                salestotal +=  saleValue;
+                sale = window.prompt("Enter a sale amount (Type 'Q' to end ) :  ", "0");
+                saleValue = parseFloat(sale);
+                if (sale != "q" && sale != "Q") {
+                    document.write("Sale " + x + ": <strong>$" + saleValue + "</strong><br />");
+                    x++;
+                }
+            }
+            salestotalValue = parseFloat(salestotal);
+            total = salestotalValue * commission;
+            document.write("<br /><strong>Total Commission : " + "$" + total + "</strong>");
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 20</h3>
+    <div>Write a program that computes the commission and total payment of sales of an employee. This program will:
+     <ul>
+         <li>Ask for sale item amount.</li>
+         <li>Repeat until data is done being entered.</li>
+         <li>Calculate the percentage of commission based on total sales.</li>
+     </ul></div>
+
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        <div id="result">
+            <h3>Result</h3>
+            <button onclick="init()">Click here to run the program.</button>
+        </div>
+        <div id="code">
+            <h3>Source Code</h3>
+           <pre>
+    function init()
+        {
+            var sale;
+            var saleValue;
+            var salestotal;
+            var total;
+            var salestotalValue;
+            var commission = 0.10;
+            var x;
+
+            x = 1;
+            total = 0;
+            sale = 0;
+            saleValue = 0;
+            salestotal = 0;
+
+            while (sale != "q" && sale != "Q") {
+                salestotal +=  saleValue;
+                sale = window.prompt("Enter a sale amount (Type 'Q' to end ) :  ", "0");
+                saleValue = parseFloat(sale);
+                if (sale != "q" && sale != "Q") {
+                    document.write("Sale " + x + ": <strong>$" + saleValue + "</strong><br />");
+                    x++;
+                }
+            }
+            salestotalValue = parseFloat(salestotal);
+            total = salestotalValue * commission;
+            document.write("<br /><strong>Total Commission : " + "$" + total + "</strong>");
+        }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

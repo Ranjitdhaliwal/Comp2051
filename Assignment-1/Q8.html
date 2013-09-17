@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            if (confirm("Do you want to see images"))
+            {
+                window.open("Q8-1.html", "_blank", 'width=600,height=400');
+            }
+            else
+            { }
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 8</h3>
+    <p>Create two web pages. The first page should ask the user if he or she wants to see some pictures. When the user responds positively, a new window should open displaying several images.</p>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        <div id="result">
+            <h3>Result</h3>
+            <button onclick="init()">Click here to run the program.</button>
+        </div>
+        <div id="code">
+            <h3>Source Code</h3>
+           <pre>
+           function init() 
+           {
+            if (confirm("Do you want to see images"))
+            {
+                window.open("Q8-1.html", "_blank", 'width=600,height=400');
+            }
+           }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

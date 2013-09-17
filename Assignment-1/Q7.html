@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            alert("JavaScript rules!");
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>Program 7</h3>
+    <p>Create a web page that will run a JavaScript script as soon as the page loads, using the onload event. The script should display the following: JavaScript rules!</p>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        <div id="result">
+            <h3>Result</h3>
+            <button onclick="init()">Click here to run the program.</button>
+        </div>
+        <div id="code">
+            <h3>Source Code</h3>
+           <pre>
+            &lt;head&gt;
+            &lt;title&gt;&lt;/title&gt;
+            &nbsp; &nbsp; &lt;script type=&quot;text/javascript&quot;&gt;
+                function init() 
+                {
+                    alert("JavaScript rules!");
+                }
+            &lt;/script&gt;
+            &lt;/head&gt;
+            &lt;body onload=&quot;init()&quot;&gt;
+               ...
+               ...
+               ...
+            &lt;/body&gt;
+            &lt;/html&gt;
+
+           
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

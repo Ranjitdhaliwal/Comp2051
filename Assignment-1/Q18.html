@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var totalTanks = 0;
+            var miles = 0;
+            var totalMiles = 0;
+            var gallons = 0;
+            var totalGallons = 0;
+            var milesPerGallon =0 ;
+            var totalMilesPerGallon =0;
+      
+            count = 1;
+            totalTanks = window.prompt("Enter number of full tanks to average:");
+           
+            while (count <= totalTanks)
+            {
+               
+                     // Get gallon of fuel filled for current tank[count]
+                    gallons = parseInt(window.prompt("Enter gallon of fuel filled for tank #" + count + ":"));
+                    
+                     // Get miles driven for current tank[count]
+                    miles = parseInt(window.prompt("Enter miles driven for tank #" + count + ":"));
+                   
+                    totalMiles += miles;
+                    totalGallons += gallons;
+                    
+                    if ( gallons != 0 )
+                    {
+                    milesPerGallon = miles / gallons;
+                    document.writeln(
+                            "<br /><br />Gallons used: " + gallons +
+                             "<br/>Miles driven: " + miles +
+                             "<br />Miles/Gallon : " + milesPerGallon );
+                            } // end if
+                    
+                  
+                    count++;
+            } // end while
+
+            totalMilesPerGallon = totalMiles / totalGallons;
+            document.writeln("<br /><br />Total Miles/Gallon: " + totalMilesPerGallon);
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 18</h3>
+    <div>Write a program that calculates an average of miles per gallon for a vehicle over the history of miles/gallons factor. The steps are the following:
+       <ul>
+           <li>Input number of full tanks to average.</li>
+           <li>Input the gallons of fuel filled for number x</li>
+           <li>Input the miles driven for number x</li>
+           <li>Repeat entry of gallons and miles until the number of tanks is entered.</li>
+           <li>Print the average miles per gallon for each tankful and print an average at the bottom.</li>
+     </ul>
+    </div>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        <div id="result">
+            <h3>Result</h3>
+            <button onclick="init()">Click here to run the program.</button>
+        </div>
+        <div id="code">
+            <h3>Source Code</h3>
+           <pre>
+function init() {
+    var totalTanks = 0;
+    var miles = 0;
+    var totalMiles = 0;
+    var gallons = 0;
+    var totalGallons = 0;
+    var milesPerGallon =0 ;
+    var totalMilesPerGallon =0;
+ 
+    count = 1;
+    totalTanks = window.prompt("Enter number of full tanks to average:");
+           
+    while (count <= totalTanks)
+    {
+            // Get gallon of fuel filled for current tank[count]
+            gallons = parseInt(window.prompt("Enter gallon of fuel filled for tank #" + count + ":"));
+                    
+                // Get miles driven for current tank[count]
+            miles = parseInt(window.prompt("Enter miles driven for tank #" + count + ":"));
+                   
+            totalMiles += miles;
+            totalGallons += gallons;
+                    
+            if ( gallons != 0 )
+            {
+            milesPerGallon = miles / gallons;
+            document.writeln(
+                    "&lt;br /&gt;Gallons used: " + gallons +
+                        "&lt;br /&gt;Miles driven: " + miles +
+                        "&lt;br /&gt;Miles/Gallon : " + milesPerGallon );
+                    } // end if
+                  
+            count++;
+    } // end while
+
+    totalMilesPerGallon = totalMiles / totalGallons;
+    document.writeln("&lt;br /&gt;&lt;br /&gt;Total Miles/Gallon: " + totalMilesPerGallon);
+
+}
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>
