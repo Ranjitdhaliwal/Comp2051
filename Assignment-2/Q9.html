@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var count = 1;
+            var totalEmployees = parseInt(prompt("Enter number of Employee", "0"))
+            if (totalEmployees > 0) {
+                var totalHours = 0;
+                var hourlyRate = 0;
+                var grossPay = 0;
+               
+                while (count <= totalEmployees)
+                {
+                    totalHours = parseFloat(prompt("Enter hours of employee #" + count + "\n[ Hours must be greater then 0]", "0"));
+                    hourlyRate = parseFloat(prompt("Enter hourly rate of employee #" + count + "\n[ Rate must be greater then 0]", "0"));
+
+                    if (totalHours <= 0 || hourlyRate <= 0) {
+                        alert("ERROR : hours and hourly rate must be greater then 0")
+                    }
+                    else {
+                        if(totalHours> 40)
+                        {
+                            grossPay = (40 * hourlyRate) + (totalHours - 40) * (hourlyRate * 1.5);
+                           
+                        }
+                        else
+                        {
+                            grossPay = totalHours * hourlyRate;
+                        }
+
+                        document.write("Gross pay of employee #" + count + " : " + grossPay + "</br>");
+                    }
+                    count++;
+                }
+               
+            }
+            else
+                alert("Number of Employees must be greater then 0.")
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 9</h3>
+    <div>Develop a script that will determine the gross pay for each of three employees. The company pays
+“straight time” for the first 40 hours worked by each employee and pays “time and a half” for all hours
+worked in excess of 40 hours. You’re given a list of the employees of the company, the number of hours
+each employee worked last week, and the hourly rate of each employee. Your script should input this
+information for each employee, determine the employee’s gross pay and output HTML5 text that
+displays the employee’s gross pay. Use prompt dialogs to input the data. Some sample data:
+
+            <img src="Q9.png" /><br /></div>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        
+        <div id="code">
+            <h3>Source Code</h3>
+             <button onclick="init()">Click here to run the program.</button>
+            <div style="clear:both;">&nbsp;</div>
+       <pre>function init() {
+            var count = 1;
+            var totalEmployees = parseInt(prompt("Enter number of Employee", "0"))
+            if (totalEmployees > 0) {
+                var totalHours = 0;
+                var hourlyRate = 0;
+                var grossPay = 0;
+               
+                while (count <= totalEmployees)
+                {
+                    totalHours = parseFloat(prompt("Enter hours of employee #" + count + "\n[ Hours must be greater then 0]", "0"));
+                    hourlyRate = parseFloat(prompt("Enter hourly rate of employee #" + count + "\n[ Rate must be greater then 0]", "0"));
+
+                    if (totalHours <= 0 || hourlyRate <= 0) {
+                        alert("ERROR : hours and hourly rate must be greater then 0")
+                    }
+                    else {
+                        if(totalHours> 40)
+                        {
+                            grossPay = (40 * hourlyRate) + (totalHours - 40) * (hourlyRate * 1.5);
+                           
+                        }
+                        else
+                        {
+                            grossPay = totalHours * hourlyRate;
+                        }
+
+                        document.write("Gross pay of employee #" + count + " : " + grossPay + "&lt;br /&gt;");
+                    }
+                    count++;
+                }
+               
+            }
+            else
+                alert("Number of Employees must be greater then 0.")
+        }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

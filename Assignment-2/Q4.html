@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var count = 1;
+            var totalNumber = parseInt(prompt("Enter number of values to check", "0"))
+
+            if (totalNumber > 0) {
+                var minNumber = 0;
+                var tempMinimum = 0;
+                while (count <= totalNumber)
+                {
+                    tempMinimum = parseInt(prompt("Enter value #" + count + "", "0"));
+
+                    if (count > 1)
+                    {
+                        if (tempMinimum < minNumber)
+                        {
+                            minNumber = tempMinimum;// If current value is less then the value in minNumber then set it as a Minimum
+                        }
+                    }
+                    else
+                    {
+                        // if it is first loop then assume first value to be smallest
+                        minNumber = tempMinimum;
+                    }
+                    count++;
+                }
+               
+                alert("Smallest number is : " + minNumber);
+            }
+            else
+                alert("Count must be greater then 0.")
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 4</h3>
+    <p>Write a script that finds the smallest of several non-negative integers. Assume that the first value read specifies the number of values to be input from the user.</p>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        
+        <div id="code">
+            <h3>Source Code</h3>
+             <button onclick="init()">Click here to run the program.</button>
+            <div style="clear:both;">&nbsp;</div>
+       <pre>function init() {
+            var count = 1;
+            var totalNumber = parseInt(prompt("Enter number of values to check", "0"))
+
+            if (totalNumber > 0) {
+                var minNumber = 0;
+                var tempMinimum = 0;
+                while (count <= totalNumber)
+                {
+                    tempMinimum = parseInt(prompt("Enter value #" + count + "", "0"));
+
+                    if (count > 1)
+                    {
+                        if (tempMinimum < minNumber)
+                        {
+                            minNumber = tempMinimum;// If current value is less then the value in minNumber then set it as a Minimum
+                        }
+                    }
+                    else
+                    {
+                        // if it is first loop then assume first value to be smallest
+                        minNumber = tempMinimum;
+                    }
+                    count++;
+                }
+               
+                alert("Smallest number is : " + minNumber);
+            }
+            else
+                alert("Count must be greater then 0.")
+        }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

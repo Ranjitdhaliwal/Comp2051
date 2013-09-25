@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+
+        function init() {
+            var input = prompt("Enter 5 digit integer \n[ Enter x to exit]", "00000");
+            while (input != 'x') {
+
+                if (input.length == 5) {
+
+                    checkPalindrome(input);
+                }
+                else {
+
+                    alert("Please enter 5 digit number only");
+                }
+                input = prompt("Enter 5 digit integer \n[ Enter x to exit]", "00000");
+            }
+       
+        }
+        function checkPalindrome(input)
+        {
+            
+            var encrypted = [];
+            var tempNum;
+
+            if (input.length == 5) {
+                encrypted[0] = parseInt(input.charAt(0));
+                encrypted[1] = parseInt(input.charAt(1));
+                encrypted[2] = parseInt(input.charAt(2));
+                encrypted[3] = parseInt(input.charAt(3));
+                encrypted[4] = parseInt(input.charAt(4));
+
+                if ((encrypted[0] == encrypted[4]) && (encrypted[1] == encrypted[3]))
+                {
+                    document.write(encrypted.join('') + " is a palindrome. </br>");
+                }
+                else {
+                    document.write(encrypted.join('') + " is not a palindrome. </br>");
+                }
+
+                return ;
+
+            } else {
+                alert("Please enter 5 digit number");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 13</h3>
+    <div>
+      A palindrome is a number or a text phrase that reads the same backward and forward. For example, each of the following five-digit integers is a palindrome: 12321, 55555, 45554, 11611. Write a script that reads in a five-digit integer and determines whether it’s a palindrome. If the number is not five digits long, display an alert dialog indicating the problem to the user. Allow the user to enter a new value after dismissing the alert dialogue. [hint: try using both division and remainder operations to “pick-off” each digit]
+        
+    </div>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+
+        <div id="code">
+            <h3>Source Code</h3>
+            <button onclick="init()">Click here to run the program.</button>
+            <div style="clear: both;">&nbsp;</div>
+            <pre> function init() {
+            var input = prompt("Enter 5 digit integer \n[ Enter x to exit]", "00000");
+            while (input != 'x') {
+
+                if (input.length == 5) {
+
+                    checkPalindrome(input);
+                }
+                else {
+
+                    alert("Please enter 5 digit number only");
+                }
+                input = prompt("Enter 5 digit integer \n[ Enter x to exit]", "00000");
+            }
+       
+        }
+        function checkPalindrome(input)
+        {
+            
+            var encrypted = [];
+            var tempNum;
+
+            if (input.length == 5) {
+                encrypted[0] = parseInt(input.charAt(0));
+                encrypted[1] = parseInt(input.charAt(1));
+                encrypted[2] = parseInt(input.charAt(2));
+                encrypted[3] = parseInt(input.charAt(3));
+                encrypted[4] = parseInt(input.charAt(4));
+
+                if ((encrypted[0] == encrypted[4]) && (encrypted[1] == encrypted[3]))
+                {
+                    document.write(encrypted.join('') + " is a palindrome. &lt;/br&gt");
+                }
+                else {
+                    document.write(encrypted.join('') + " is not a palindrome. &lt;/br&gt");
+                }
+
+                return ;
+
+            } else {
+                alert("Please enter 5 digit number");
+            }
+
+        }
+
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+
+        function init() {
+           
+            var principal = 1000;
+            var rate = .05;
+            var year = 10;
+            
+            var count = 1
+            document.write("<h3>Principal : 5000</h3><h3>Rate : 5%</h3><h3>Year : 10</h3>");
+            document.write("<table><thead><tr><th>Year</th><th>Amount</th></tr> </thead>");
+            while (count <= year)
+            {
+                var amount = principal * Math.pow((1 + rate), count)
+                document.write(" <tr><td>" + count + "</td><td>" + amount + "</td></tr>");
+                count++;
+            }
+            document.write("</table>");
+        }
+        
+    </script>
+</head>
+<body>
+    
+       
+  
+    <h3>Program 14</h3>
+    <div>
+    A person invests $1000.00 in a savings account yielding 5 percent interest. Assuming that all the interest is left on deposit, calculate and print the amount of money in the account at the end of each year for 10 years. Use the following formula to determine the amounts:
+            <ul>
+                <li>a = p * (1 + r)n where p is the original amount invested (i.e., the principal), r is the annual interest rate, n is the number of years, a is the amount on deposit at the end of the nth year.
+                </li>
+                <li>Create a program which puts the value of the amount on deposit every year for the next 10 years, as well as the count of the year, in a table.
+                </li>
+
+            </ul>    
+    </div>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+
+        <div id="code">
+            <h3>Source Code</h3>
+            <button onclick="init()">Click here to run the program.</button>
+            <div style="clear: both;">&nbsp;</div>
+            <pre>  function init() {
+           
+            var principal = 1000;
+            var rate = .05;
+            var year = 10;
+            
+            var count = 1
+            document.write("&lt;h3&gt;Principal : 5000&lt;/h3&gt;&lt;h3&gt;Rate : 5%&lt;/h3&gt;&lt;h3&gt;Year : 10&lt;/h3&gt;");
+            document.write("&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Amount&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt;");
+            while (count <= year)
+            {
+                var amount = principal * Math.pow((1 + rate), count)
+                document.write("&lt;tr&gt;&lt;td&gt;&quot; + count + &quot;&lt;/td&gt;&lt;td&gt;&quot; + amount + &quot;&lt;/td&gt;&lt;/tr&gt;");
+                count++;
+            }
+            document.write("&lt;/table&gt");
+        }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

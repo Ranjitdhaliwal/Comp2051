@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var totalTanks = 0;
+            var miles = 0;
+            var totalMiles = 0;
+            var gallons = 0;
+            var totalGallons = 0;
+            var milesPerGallon = 0;
+            var totalMilesPerGallon = 0;
+
+            count = 1;
+            totalTanks = window.prompt("Enter number of full tanks to average:");
+
+            while (count <= totalTanks) {
+
+                // Get gallon of fuel filled for current tank[count]
+                gallons = parseInt(window.prompt("Enter gallon of fuel filled for tank #" + count + ":"));
+
+                // Get miles driven for current tank[count]
+                miles = parseInt(window.prompt("Enter miles driven for tank #" + count + ":"));
+
+                totalMiles += miles;
+                totalGallons += gallons;
+
+                if (gallons != 0) {
+                    milesPerGallon = miles / gallons;
+                    document.writeln(
+                            "<br /><br />Gallons used: " + gallons +
+                             "<br/>Miles driven: " + miles +
+                             "<br />Miles/Gallon : " + milesPerGallon);
+                } // end if
+
+
+                count++;
+            } // end while
+
+            totalMilesPerGallon = totalMiles / totalGallons;
+            document.writeln("<br /><br />Total Miles/Gallon: " + totalMilesPerGallon);
+
+        }
+
+    </script>
+</head>
+<body>
+    <h3>Program 7</h3>
+    <div>Drivers are concerned with the mileage obtained by their automobiles. One driver has kept track of
+several tankfuls of gasolie by recording the number of miles driven and the number of gallons used for
+each thankful. Develop a script that will take as input the miles driven and gallons used (both as
+integers), for each thankful. The script should calculate and output HTML5 text that displays the number
+of miles per gallon obtained for each thankful and prints the combined number of miles per gallon
+obtained for all tankfuls up to this point. Use prompt dialogs to obtain the data from the users. Use your
+own made-up data to solve the problem.</div>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        
+        <div id="code">
+            <h3>Source Code</h3>
+             <button onclick="init()">Click here to run the program.</button>
+            <div style="clear:both;">&nbsp;</div>
+            <pre>
+
+           function init() {
+    var totalTanks = 0;
+    var miles = 0;
+    var totalMiles = 0;
+    var gallons = 0;
+    var totalGallons = 0;
+    var milesPerGallon =0 ;
+    var totalMilesPerGallon =0;
+ 
+    count = 1;
+    totalTanks = window.prompt("Enter number of full tanks to average:");
+           
+    while (count <= totalTanks)
+    {
+            // Get gallon of fuel filled for current tank[count]
+            gallons = parseInt(window.prompt("Enter gallon of fuel filled for tank #" + count + ":"));
+                    
+                // Get miles driven for current tank[count]
+            miles = parseInt(window.prompt("Enter miles driven for tank #" + count + ":"));
+                   
+            totalMiles += miles;
+            totalGallons += gallons;
+                    
+            if ( gallons != 0 )
+            {
+            milesPerGallon = miles / gallons;
+            document.writeln(
+                    "&lt;br /&gt;Gallons used: " + gallons +
+                        "&lt;br /&gt;Miles driven: " + miles +
+                        "&lt;br /&gt;Miles/Gallon : " + milesPerGallon );
+                    } // end if
+                  
+            count++;
+    } // end while
+
+    totalMilesPerGallon = totalMiles / totalGallons;
+    document.writeln("&lt;br /&gt;&lt;br /&gt;Total Miles/Gallon: " + totalMilesPerGallon);
+
+}
+
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

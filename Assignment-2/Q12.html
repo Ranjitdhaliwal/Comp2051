@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+
+        function init() {
+            var input = window.prompt("Enter a number:", "0000");
+            //Encrypt the number
+            var encryptedKey = ProcessNumber(input, 7);
+            document.write("Encrypted Key is : ");
+            document.write(encryptedKey);
+
+            //Decrypt the number
+            document.write("</br> Decrypted Key is : ");
+            var decryptedKey = ProcessNumber(encryptedKey, 3);
+            document.write(decryptedKey);
+       
+        }
+        function ProcessNumber(input, EncryptionKey)
+        {
+            
+            var encrypted = [];
+            var tempNum;
+
+            if (input.length == 4) {
+                encrypted[0] = (parseInt(input.charAt(0)) + EncryptionKey) % 10;
+                encrypted[1] = (parseInt(input.charAt(1)) + EncryptionKey) % 10;
+                encrypted[2] = (parseInt(input.charAt(2)) + EncryptionKey) % 10;
+                encrypted[3] = (parseInt(input.charAt(3)) + EncryptionKey) % 10;
+
+                // Swapping 2 digit with 4
+                tempNum = encrypted[3];
+                encrypted[3] = encrypted[1];// encrypted[3] is second digit in the number
+                encrypted[1] = tempNum;
+
+                // Swapping 1 digit with 3
+                tempNum = encrypted[0];
+                encrypted[0] = encrypted[2];// encrypted[3] is second digit in the number
+                encrypted[2] = tempNum;
+
+                return encrypted.join('');
+
+            } else {
+                alert("Please enter 4 digit number");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 12</h3>
+    <div>
+        A company wants to transmit data over the telephone, but it is concerned that its phones may be tapped. All of its data is transmitted as four-digit integers. It has asked you to write a program that will encrypt its data so that the data may be transmitted more securely. Your script should read a four-digit integer entered by the user in a prompt dialog and encrypt it as follows: Replace each digit by (the sum of that digit plus 7) modulus 10. Then swap the first digit with the third, and swap the second digit with the fourth. Then output text that displays the encrypted integer. Once this is done, write a program that inputs an encrypted four-digit integer and decrypts it to form the original number.
+       
+    </div>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+
+        <div id="code">
+            <h3>Source Code</h3>
+            <button onclick="init()">Click here to run the program.</button>
+            <div style="clear: both;">&nbsp;</div>
+            <pre>function init() {
+            var input = window.prompt("Enter a number:", "0000");
+            //Encrypt the number
+            var encryptedKey = ProcessNumber(input, 7);
+            document.write("Encrypted Key is : ");
+            document.write(encryptedKey);
+
+            //Decrypt the number
+            document.write("&lt;/br&gt> Decrypted Key is : ");
+            var decryptedKey = ProcessNumber(encryptedKey, 3);
+            document.write(decryptedKey);
+       
+        }
+        function ProcessNumber(input, EncryptionKey)
+        {
+            
+            var encrypted = [];
+            var tempNum;
+
+            if (input.length == 4) {
+                encrypted[0] = (parseInt(input.charAt(0)) + EncryptionKey) % 10;
+                encrypted[1] = (parseInt(input.charAt(1)) + EncryptionKey) % 10;
+                encrypted[2] = (parseInt(input.charAt(2)) + EncryptionKey) % 10;
+                encrypted[3] = (parseInt(input.charAt(3)) + EncryptionKey) % 10;
+
+                // Swapping 2 digit with 4
+                tempNum = encrypted[3];
+                encrypted[3] = encrypted[1];// encrypted[3] is second digit in the number
+                encrypted[1] = tempNum;
+
+                // Swapping 1 digit with 3
+                tempNum = encrypted[0];
+                encrypted[0] = encrypted[2];// encrypted[3] is second digit in the number
+                encrypted[2] = tempNum;
+
+                return encrypted.join('');
+
+            } else {
+                alert("Please enter 4 digit number");
+            }
+
+        }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

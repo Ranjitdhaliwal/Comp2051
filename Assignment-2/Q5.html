@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var count = 1;
+            var product = 1;
+          
+            while (count <= 15)
+            {
+                if (count % 2 != 0)
+                {
+                    product *= count; // Multiply if it is a odd number
+                }
+
+                count++;
+            }
+           
+            alert("Product of odd number between 1 - 15 is : " + product);
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 5</h3>
+    <p>Write a script that calculates the product of the odd integers from 1 to 15 then outputs HTML text that displays the results.</p>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        
+        <div id="code">
+            <h3>Source Code</h3>
+             <button onclick="init()">Click here to run the program.</button>
+            <div style="clear:both;">&nbsp;</div>
+       <pre>function init() {
+            var count = 1;
+            var product = 1;
+          
+            while (count <= 15)
+            {
+                if (count % 2 != 0)
+                {
+                    product *= count; // Multiply if it is a odd number
+                }
+
+                count++;
+            }
+           
+            alert("Product of odd number between 1 - 15 (including 15) is : " + product);
+        }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

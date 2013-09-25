@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var count = 1;
+            document.write("<pre>");
+            document.write("Pattern (a)");
+            while (count <= 10)
+            {
+                document.write("</br>");
+                printAsterisks(count);
+                 count++;
+            }
+          
+            count = 10;
+            document.write("</br>Pattern (b)");
+            while (count >= 1) {
+                document.write("</br>");
+                printAsterisks(count);
+                 count--;
+            }
+
+            count = 10;
+            document.write("</br>Pattern (c)");
+            while (count >= 1) {
+                document.write("</br>");
+                printSpaces(10 - count);
+                printAsterisks(count);
+                count--;
+            }
+
+            count = 1;
+            document.write("</br>Pattern (d)");
+            while (count <= 10) {
+                document.write("</br>");
+                printSpaces(10 - count);
+                printAsterisks(count);
+               
+                count++;
+            }
+            document.write("<pre/>");
+        }
+        function printAsterisks(Total)
+        {
+            var counter = 1;
+            while (counter <= Total)
+            {
+                document.write("*");
+                counter++;
+            }
+        }
+        function printSpaces(Total) {
+            var counter = 1;
+            while (counter <= Total)
+            {
+                document.write(" ");
+                counter++;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 6</h3>
+    <p><img src="Q6.png" style="float:right;"/>Write a script that outputs XHTML to display the given patterns separately, one below the other. Use for statements to generate the patterns. All asterisks (*) should be printed by a single statement of the form document.write( "*" ); (this causes the asterisks to print side by side). A statement of the form document.writeln( " &lt;br/&gt; " ); can be used to position to the next line. A statement of the form document.write( " " ); can be used to display a space (needed for the last two patterns). There should be no other output statements in the program. [Hint: The last two patterns require that each line begin with an appropriate number of blanks. You may need to use the XHTML
+            "pre" tags.]
+
+    </p>
+    <div style="clear:both;">&nbsp;</div>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        
+        <div id="code">
+            <h3>Source Code</h3>
+             <button onclick="init()">Click here to run the program.</button>
+            <div style="clear:both;">&nbsp;</div>
+       <pre>function init() {
+            var count = 1;
+            document.write("&lt;pre&gt"");
+            document.write("Pattern (a)");
+            while (count <= 10)
+            {
+                document.write("&lt;/br&gt ");
+                printAsterisks(count);
+                 count++;
+            }
+          
+            count = 10;
+            document.write("&lt;/br&gt Pattern (b)");
+            while (count >= 1) {
+                document.write("&lt;/br&gt ");
+                printAsterisks(count);
+                 count--;
+            }
+
+            count = 10;
+            document.write("&lt;/br&gt Pattern (c)");
+            while (count >= 1) {
+                document.write("&lt;/br&gt ");
+                printSpaces(10 - count);
+                printAsterisks(count);
+                count--;
+            }
+
+            count = 1;
+            document.write("&lt;/br&gt Pattern (d)");
+            while (count <= 10) {
+                document.write("&lt;/br&gt ");
+                printSpaces(10 - count);
+                printAsterisks(count);
+               
+                count++;
+            }
+            document.write("&lt;pre/&gt");
+    }
+    function printAsterisks(Total)
+    {
+        var counter = 1;
+        while (counter <= Total)
+        {
+            document.write("*");
+            counter++;
+        }
+    }
+    function printSpaces(Total) {
+        var counter = 1;
+        while (counter <= Total)
+        {
+            document.write(" ");
+            counter++;
+        }
+    }
+            <pre/>
+        </div>
+
+    </div>
+</body>
+</html>

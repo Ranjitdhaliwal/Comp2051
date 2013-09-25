@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function init() {
+            var count = 1;
+            var totalGrades = 0;
+            var average = 0;
+            while (count <= 10)
+            {
+                totalGrades += parseInt(prompt("Enter grade for student number #" + count+"\n[ Grade must be between 0 and 100]","0"));
+                count++;
+            }
+            average = totalGrades / 10;
+            alert("Class average is : " + average);
+        }
+    </script>
+</head>
+<body>
+    <h3>Program 1</h3>
+    <p>A class of ten students took a quiz. The grades (integers in the range 0 to 100) for this quiz are available to you. Determine the class average on the quiz.</p>
+    <a href="Index.html" class="back">Go back to main page.</a>
+    <hr />
+    <div>
+        
+        <div id="code">
+            <h3>Source Code</h3>
+             <button onclick="init()">Click here to run the program.</button>
+            <div style="clear:both;">&nbsp;</div>
+       <pre>function init() {
+            var count = 1;
+            var totalGrades = 0;
+            var average = 0;
+            while (count <= 10)
+            {
+                totalGrades += parseInt(prompt("Enter grade for student number #" + count+"\n[ Grade must be between 0 and 100]","0"));
+                count++;
+            }
+            average = totalGrades / 10;
+            alert("Class average is : " + average);
+            }
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>
